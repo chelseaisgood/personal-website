@@ -13,7 +13,7 @@
 }
 
 .nav-bar-name {
-    font-size: 35px;
+    font-size: 45px;
     width: 100%;
     margin:0; 
     padding:0; 
@@ -36,6 +36,7 @@
     color: #444;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-link:hover {
