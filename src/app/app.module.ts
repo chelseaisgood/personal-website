@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProjectListComponent } from './components/pages/project-list/project-list.component';
 import { IntroductionComponent } from './components/pages/introduction/introduction.component';
+import { WorkExperienceComponent } from './components/pages/work-experience/work-experience.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { IntroductionComponent } from './components/pages/introduction/introduct
     FooterComponent,
     ProjectListComponent,
     IntroductionComponent,
+    WorkExperienceComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
