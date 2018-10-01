@@ -12,6 +12,8 @@ import { IntroductionComponent } from './components/pages/introduction/introduct
 import { WorkExperienceComponent } from './components/pages/work-experience/work-experience.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 
+import { SkillsService } from './services/skills.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SkillsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

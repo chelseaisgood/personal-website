@@ -1,37 +1,10 @@
 <div class="skillsets-container">
-  <div class="skillset-container">
-    <p class="skillset-title">Java</p>
-    <div class="skill-color-container">
-      <div class="expert-color"></div>
-      <div class="expert-blank"></div>
-    </div>
-  </div>
-  <div class="skillset-container">
-    <p class="skillset-title">React.js</p>
-    <div class="skill-color-container">
-      <div class="expert-color"></div>
-      <div class="expert-blank"></div>
-    </div>
-  </div>
-  <div class="skillset-container">
-    <p class="skillset-title">React and Redux</p>
-    <div class="skill-color-container">
-      <div class="expert-color"></div>
-      <div class="expert-blank"></div>
-    </div>
-  </div>
-  <div class="skillset-container">
-    <p class="skillset-title">Angular4+</p>
-    <div class="skill-color-container">
-      <div class="expert-color"></div>
-      <div class="expert-blank"></div>
-    </div>
-  </div>
-  <div class="skillset-container">
-    <p class="skillset-title">Node.js</p>
-    <div class="skill-color-container">
-      <div class="expert-color"></div>
-      <div class="expert-blank"></div>
-    </div>
+  <div *ngFor="let skill of skills" class="skillset-container">
+      <p class="skillset-title">{{ skill.name }}</p>
+      <div class="skill-color-container">
+        <div class="left-progress-bar expert-color-{{ skill.proficientLevel }}">{{ skill.proficientDescription }}</div>
+        <div class="right-progress-bar expert-blank-{{ 5 - skill.proficientLevel }}"></div>
+      </div>
   </div>
 </div>
+  
