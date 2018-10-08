@@ -1,0 +1,212 @@
+.checkbox-toggle-button {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    font-size: 20px; /* Set the font size, different from inherited 0 */
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    width: 300px;
+    background-color: #269CE9;
+    border-color: #269CE9;
+    margin-bottom: 7px;
+    margin-right: 20px;
+}
+
+.checkbox-toggle-button:hover{
+    background-color: #70B9E8;
+}
+
+.checkbox-toggle-button:active{
+    background: #269CE9;
+}
+
+.container {
+    /* display: block; */
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-left: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.small-screen {
+    display: none;
+}
+
+.big-screen {
+    display: flex;
+}
+
+@media screen and (max-width:600px) {
+    .checkbox-container {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .small-screen {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .big-screen {
+        display: none;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .checkbox-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .my-checkfield {
+        /* border: solid 1px black; */
+        color: black;
+        width: 130px;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+        letter-spacing: -1px;
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    .my-checkfield-selected {
+        color: black;
+        width: 130px;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+        letter-spacing: -1px;
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 15px;
+        border: solid 2px green;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .my-checkfield {
+        /* border: solid 1px black; */
+        color: black;
+        width: 200px;;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 19px;
+        letter-spacing: -1px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 12px;
+        /* font-weight: bold; */
+    }
+
+      
+    .my-checkfield-selected {
+        color: black;
+        width: 200px;;
+        height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 19px;
+        letter-spacing: -1px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 12px;
+        border: solid 2px green;
+    }
+  
+}
+
+.my-checkfield:focus {
+    outline:0;
+}
+  
+.my-checkfield-selected:focus {
+    outline:0;
+}
+  
+.check-button-container {
+    position: relative;
+}
+
+.top-right-check-sign {
+    position: absolute;
+    top: 1px;
+    right: 11px;
+    height: 24px;
+    width: 24px;
+}

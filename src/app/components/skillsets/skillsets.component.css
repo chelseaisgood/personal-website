@@ -1,14 +1,45 @@
-.skillsets-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 5%;
-    margin-left: 5%;
+
+
+@media screen and (max-width:600px) {
+
+    .skillsets-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+
+    .skillset-container {
+        width: 80%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:600px) {
+
+    .skillsets-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+
+    .skillset-container {
+        width: 40%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .left-progress-bar {
     display: flex;
     border: 1px solid #ccc;
-    height: 30px;
+    height: 25px;
     justify-content: flex-end;
     align-items: center;
     color: #fff;
@@ -59,7 +90,7 @@
 
 .right-progress-bar {
     border: 1px solid #ccc;
-    height: 30px;
+    height: 25px;
     text-align: center;
     border-left: none;
     background-color: transparent;
@@ -85,13 +116,13 @@
     flex: 0;
 }
 
-.skillset-container {
+/* .skillset-container {
     width: 40%;
     margin-left: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+} */
 
 .skillset-color-container {
     flex: 7;
@@ -106,7 +137,7 @@
 .skillset-title {
     flex: 3;
     width: 30%;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
@@ -115,4 +146,19 @@
     display: flex;
     flex-direction: row;
     width: 70%;
+}
+
+#skillsets-selection-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.skillsets-label {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
 }

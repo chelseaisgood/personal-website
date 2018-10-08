@@ -3,4 +3,5 @@ export class Skill {
     name: string;
     proficientLevel: number;
     proficientDescription: string;
+    type: string[];
 }

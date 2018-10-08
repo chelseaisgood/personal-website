@@ -1,0 +1,27 @@
+<div class="checkbox-container">
+  <div class="small-screen">
+    <label *ngFor="let checkboxLabel of checkboxLabels" class="container">
+      {{ checkboxLabel.name }}
+      <input
+        type="checkbox"
+        [checked]="checkboxLabel.checked"
+        (click)="onChangeCheckboxState(checkboxLabel.index, checkboxLabel.checked)"
+      >
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <div class="big-screen">
+    <div
+      *ngFor="let checkboxLabel of checkboxLabels"
+      class="check-button-container"
+      (click)="onChangeCheckboxState(checkboxLabel.index, checkboxLabel.checked)"
+    >
+      <button [className]="checkboxLabel.checked ? 'my-checkfield-selected' : 'my-checkfield'">
+          {{ checkboxLabel.name }}
+      </button>
+      <img *ngIf="checkboxLabel.checked" src="../../assets/img/if_check_1930264.svg"
+        class="top-right-check-sign"
+      />
+    </div>
+  </div>
+</div>

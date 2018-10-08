@@ -1,5 +1,9 @@
+<div id="skillsets-selection-container">
+  <a name="skillsets" class="skillsets-label">Skill Sets</a>
+  <app-skill-area-selector (changeSelectedArea)="onChangeSelectedArea($event)"></app-skill-area-selector>
+</div>
 <div class="skillsets-container">
-  <div *ngFor="let skill of skills" class="skillset-container">
+  <div *ngFor="let skill of filteredSkills" class="skillset-container">
       <p class="skillset-title">{{ skill.name }}</p>
       <div class="skill-color-container">
         <div class="left-progress-bar expert-color-{{ skill.proficientLevel }}">{{ skill.proficientDescription }}</div>
@@ -7,4 +11,3 @@
       </div>
   </div>
 </div>
-  

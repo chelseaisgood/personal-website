@@ -13,6 +13,7 @@ import { WorkExperienceComponent } from './components/pages/work-experience/work
 import { ContactComponent } from './components/pages/contact/contact.component';
 
 import { SkillsService } from './services/skills.service';
+import { SkillAreaSelectorComponent } from './components/skill-area-selector/skill-area-selector.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SkillsService } from './services/skills.service';
     IntroductionComponent,
     WorkExperienceComponent,
     ContactComponent,
+    SkillAreaSelectorComponent,
   ],
   imports: [
     BrowserModule,
