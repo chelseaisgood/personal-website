@@ -1,12 +1,23 @@
-<nav class="nav-bar-container">
-  <div class="nav-bar-left">
-    <p class="nav-bar-name">Minda Fang</p>
-    <p class="nav-bar-role">Full-Stack Web Developer, Mobile App Developer, Dreamer</p>
-  </div>
-  <div class="nav-bar-right">
-    <a class="nav-link" routerLink="/">Introduction</a>
-    <a class="nav-link" routerLink="/projects">Projects</a>
-    <a class="nav-link" routerLink="/experience">Work Experience</a>
-    <a class="nav-link" routerLink="/contact">Contact</a>
-  </div>
-</nav>
+<div class="nav-bar-outer-container">
+  <nav class="nav-bar-container">
+    <div class="nav-bar-left">
+      <p class="nav-bar-name">Minda Fang</p>
+      <p class="nav-bar-role">Full-Stack Web Developer, Mobile App Developer, Dreamer</p>
+    </div>
+    <!-- <div class="nav-bar-right">
+    </div> -->
+  </nav>
+
+  <nav class="nav-hamberger">
+    <input type="checkbox" id="checkbox1"/>
+    <label for="checkbox1">
+      <ul class="menu">
+        <li><div routerLink="/">Introduction</div></li>
+        <li><div routerLink="/projects">Projects</div></li>  
+        <li><div routerLink="/experience">Work Experience</div></li>  
+        <li><div routerLink="/contact">Contact</div></li>  
+      </ul>
+      <span class="toggle-button">☰</span>
+    </label>
+  </nav>
+</div>
